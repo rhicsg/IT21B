@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Sales Line Chart by Year</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">iPhone Sales Over the Years</h1>
+    <canvas id="myChart" width="300" height="200"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'iPhone Sales (in millions)',
+                    data: [50, 100, 150, 150, 180, 190, 200, 200, 220, 240, 260],
+                    fill: true, 
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', 
+                    borderColor: 'rgba(75, 192, 192, 1)', 
+                    borderWidth: 1,
+                    tension: 0.1,
+                    pointRadius: 3,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: 'rgba(75, 192, 192, 1)',
+                    pointHoverBorderColor: 'rgba(255, 255, 255, 1)',
+                    pointHoverBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Sales (in millions)'
+                        },
+                        ticks: {
+                            stepSize: 60
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                }
+            }
+        });
+    </script>
+</body>
+</html>
