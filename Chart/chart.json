@@ -1,0 +1,25 @@
+{
+    "barChartData": {
+      "labels": ["January", "February", "March", "April", "May", "June"], 
+      "datasets": [
+        {
+          "label": "Honda Click Sales (Units)",
+          "data": [250, 300, 350, 400, 450, 500],  
+          "backgroundColor": "rgba(75, 192, 192, 0.5)",
+          "borderColor": "rgba(75, 192, 192, 1)",
+          "borderWidth": 1
+        }
+      ]
+    },
+    "pieChartData": {
+      "labels": ["Red", "Black", "Grey", "Blue"],  
+      "datasets": [
+        {
+          "data": [150, 100, 200, 50],  
+          "backgroundColor": ["red", "black", "grey", "blue"],
+          "hoverOffset": 4
+        }
+      ]
+    }
+  }
+  
